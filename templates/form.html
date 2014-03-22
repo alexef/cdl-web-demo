@@ -1,0 +1,24 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<form method="POST" action="/form">
+    <input type="text" name="message" value="" id="msg" />
+    <button type="submit">Send message!</button>
+    <button id="but">Set default text</button>
+</form>
+
+<script src="http://code.jquery.com/jquery-1.11.0.min.js">
+</script>
+
+<script>
+$("#but").click(function(event) {
+    event.preventDefault();
+    $.ajax({
+        url: "/default-message",
+    }).done(function(result) {
+        $("#msg").val(result);
+    });
+});
+</script>
+
+{% endblock %}
