@@ -16,7 +16,7 @@ def dm():
 @app.route('/form', methods=['GET', 'POST'])
 def form():
     if flask.request.method == 'POST':
-        print "Received: ", flask.request.form
+        print "Received: ", flask.request.form['message']
     return flask.render_template('form.html')
 
 if __name__ == '__main__':

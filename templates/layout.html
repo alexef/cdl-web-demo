@@ -1,7 +1,29 @@
 <html>
+<head>
+
+    <style type="text/css">
+
+    body {
+        color: green;
+        background-color: pink;
+    }
+    #continut {
+        margin-left: auto;
+        margin-right: auto;
+        width: 600px;
+        background-color: white;
+        border: 2px solid gray;
+    }
+    </style>
+</head>
 <body>
+    <div id="continut">
     {% block content %}
     {% endblock %}
+    </div>
+
+    <div id="subsol">
     &copy; CDL 2014
+    </div>
 </body>
 </html>
